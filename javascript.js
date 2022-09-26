@@ -46,10 +46,11 @@ function playRound(playerSelection, computerSelection){
 
 let playerScore = 0;
 let computerScore = 0;
-let playerSelection = prompt("Rock, Paper or Scissors? ")
+
 
 function game(){
     for (let i = 0; i < 5; i++){
+        let playerSelection = prompt("Rock, Paper or Scissors? ")
         playRound(playerSelection,getComputerChoice())
     }
 
