@@ -15,4 +15,26 @@ function getComputerChoice(){
     }
 }
 
-console.log(getComputerChoice())
+//single round of RPS
+
+function playRound(playerSelection, computerSelection){
+    if (playerSelection == computerSelection){
+        return "Tie"
+    } else if (playerSelection == 'rock' && computerSelection == 'paper'){
+        return "You lose, " + computerSelection + " beats " + playerSelection;
+    } else if (playerSelection == 'rock' && computerSelection == 'scissors'){
+        return "You win, " + playerSelection + " beats " + computerSelection;
+    } else if (playerSelection == 'paper' && computerSelection == 'scissors'){
+        return "You lose, " + computerSelection + " beats " + playerSelection;
+    } else if (playerSelection == 'paper' && computerSelection == 'rock'){
+        return "You win, " + playerSelection + " beats " + computerSelection;
+    } else if (playerSelection == 'scissors' && computerSelection == 'rock'){
+        return "You lose, " + computerSelection + " beats " + playerSelection;
+    } else if (playerSelection == 'scissors' && computerSelection == 'paper'){
+        return "You win, " + playerSelection + " beats " + computerSelection;
+    }
+}
+
+
+
+console.log(playRound('paper',getComputerChoice()))
