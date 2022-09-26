@@ -16,25 +16,24 @@ function getComputerChoice(){
 }
 
 //single round of RPS
-
 function playRound(playerSelection, computerSelection){
-    if (playerSelection == computerSelection){
+    let playerChoice = playerSelection.toLowerCase();
+
+    if (playerChoice == computerSelection){
         return "Tie"
-    } else if (playerSelection == 'rock' && computerSelection == 'paper'){
-        return "You lose, " + computerSelection + " beats " + playerSelection;
-    } else if (playerSelection == 'rock' && computerSelection == 'scissors'){
-        return "You win, " + playerSelection + " beats " + computerSelection;
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors'){
-        return "You lose, " + computerSelection + " beats " + playerSelection;
-    } else if (playerSelection == 'paper' && computerSelection == 'rock'){
-        return "You win, " + playerSelection + " beats " + computerSelection;
-    } else if (playerSelection == 'scissors' && computerSelection == 'rock'){
-        return "You lose, " + computerSelection + " beats " + playerSelection;
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper'){
-        return "You win, " + playerSelection + " beats " + computerSelection;
+    } else if (playerChoice == 'rock' && computerSelection == 'paper'){
+        return "You lose, " + computerSelection + " beats " + playerChoice;
+    } else if (playerChoice == 'rock' && computerSelection == 'scissors'){
+        return "You win, " + playerChoice + " beats " + computerSelection;
+    } else if (playerChoice == 'paper' && computerSelection == 'scissors'){
+        return "You lose, " + computerSelection + " beats " + playerChoice;
+    } else if (playerChoice == 'paper' && computerSelection == 'rock'){
+        return "You win, " + playerChoice + " beats " + computerSelection;
+    } else if (playerChoice == 'scissors' && computerSelection == 'rock'){
+        return "You lose, " + computerSelection + " beats " + playerChoice;
+    } else if (playerChoice == 'scissors' && computerSelection == 'paper'){
+        return "You win, " + playerChoice + " beats " + computerSelection;
     }
 }
-
-
 
 console.log(playRound('paper',getComputerChoice()))
